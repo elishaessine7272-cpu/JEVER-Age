@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Age Input</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Age Category </h1>
+     
+        
+        <input type="number" id="ageInput" placeholder="Enter your age">
+     
+       
+        <button onclick="checkAge()">Continue</button>
+     
+        <p id="result"></p>
+      </div>
+
+    <script>
+    
+    function checkAge() {
+ 
+      var ageValue = document.getElementById("ageInput").value;
+      var age = Number(ageValue);
+ 
+    
+      var resultText = document.getElementById("result");
+ 
+      if (ageValue === "" || isNaN(age) || age < 0) {
+        resultText.innerHTML = "Please enter a valid age.";
+        return; 
+      }
+ 
+
+      var category = "";
+ 
+      if (age <= 12) {
+        category = "Child";
+      } else if (age <= 19) {
+        category = "Big boy";
+      } else if (age <= 59) {
+        category = "Adult";
+      } else {
+        category = "Elder";
+      }
+
+      resultText.innerHTML = "You are a " + category + ".";
+    }
+
+    </script>
+</body>
+</html>
