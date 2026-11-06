@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Data Management System</title>
+
+    <style>
+        #userResult {
+            display: none;
+        }
+
+        pre {
+            background-color: #f2f2f2;
+            padding: 15px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>JSON Data Management System</h1>
+
+    <!-- Search User -->
+    <h2>Search User</h2>
+
+    <form id="searchForm">
+
+        <label for="email">Enter User Email:</label>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter email address"
+            required
+        >
+
+        <button type="submit">Search User</button>
+
+    </form>
+
+    <hr>
+
+    <!-- JSON Data -->
+    <h2>JSON Data</h2>
+
+    <pre id="jsonOutput"></pre>
+
+    <p>Original Data Type: <span id="originalType"></span></p>
+
+    <p>JSON Data Type: <span id="jsonType"></span></p>
+
+    <p>Parsed Data Type: <span id="parsedType"></span></p>
+
+    <hr>
+
+    <!-- User Information -->
+    <div id="userResult">
+
+        <h2>Search Result</h2>
+
+        <p>User ID: <span id="userId"></span></p>
+
+        <p>Full Name: <span id="userName"></span></p>
+
+        <p>Email Address: <span id="userEmail"></span></p>
+
+        <p>Age: <span id="userAge"></span></p>
+
+        <p>Course: <span id="userCourse"></span></p>
+
+    </div>
+
+    <p id="message"></p>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

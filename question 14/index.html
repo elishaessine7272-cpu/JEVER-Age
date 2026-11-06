@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>External API User Management</title>
+
+    <style>
+        #userResult {
+            display: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>External API User Management</h1>
+
+    <!-- API Status -->
+    <p id="apiMessage">Loading users...</p>
+
+    <hr>
+
+    <!-- Display All Users -->
+    <h2>Registered Users</h2>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Email Address</th>
+            </tr>
+        </thead>
+
+        <tbody id="userList"></tbody>
+
+    </table>
+
+    <hr>
+
+    <!-- Search User -->
+    <h2>Search User</h2>
+
+    <form id="searchForm">
+
+        <label for="searchInput">Enter Email Address:</label>
+
+        <input
+            type="email"
+            id="searchInput"
+            placeholder="Enter user's email"
+            required
+        >
+
+        <button type="submit" id="searchBtn" disabled>
+            Search User
+        </button>
+
+    </form>
+
+    <p id="searchMessage"></p>
+
+    <!-- Search Result -->
+    <div id="userResult">
+
+        <h2>User Information</h2>
+
+        <p>Full Name: <span id="userName"></span></p>
+
+        <p>Email Address: <span id="userEmail"></span></p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

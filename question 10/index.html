@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration System</title>
+
+    <style>
+        #result {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>User Registration System</h1>
+
+    <form id="registrationForm" novalidate>
+
+        <label for="fullName">Full Name:</label>
+        <input
+            type="text"
+            id="fullName"
+            placeholder="Enter your full name"
+        >
+
+        <br><br>
+
+        <label for="email">Email Address:</label>
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+        >
+
+        <br><br>
+
+        <label for="age">Age:</label>
+        <input
+            type="number"
+            id="age"
+            placeholder="Enter your age"
+        >
+
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+        >
+
+        <br><br>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+    <div id="result">
+
+        <h2>Registration Result</h2>
+
+        <p id="message"></p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

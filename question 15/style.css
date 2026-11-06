@@ -1,0 +1,115 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+    margin: 0;
+    padding: 30px 15px;
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+}
+
+section {
+    margin: 25px 0;
+}
+
+input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #163b73;
+    color: white;
+    cursor: pointer;
+    margin: 3px;
+}
+
+button:hover {
+    background-color: #0d2850;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #163b73;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f4f6f8;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 30px 0;
+}
+
+#userDetails {
+    background-color: #f4f6f8;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#formMessage,
+#idMessage,
+#nameMessage,
+#listMessage {
+    font-weight: 500;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 700px) {
+
+    main {
+        padding: 15px;
+    }
+
+    #userTableContainer {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 800px;
+    }
+
+}

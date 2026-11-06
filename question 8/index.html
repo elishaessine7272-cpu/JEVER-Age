@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Validation System</title>
+
+    <style>
+        #result {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Password Validation System</h1>
+
+    <form id="passwordForm">
+
+        <label for="password">Enter Your Password:</label>
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            required
+        >
+
+        <button type="submit">Validate Password</button>
+
+    </form>
+
+    <div id="result">
+
+        <h2>Password Validation Result</h2>
+
+        <p id="validationMessage"></p>
+
+        <h3>Requirements:</h3>
+
+        <ul id="requirementsList"></ul>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

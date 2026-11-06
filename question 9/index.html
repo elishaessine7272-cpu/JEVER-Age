@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Data Processing System</title>
+
+    <style>
+        #result {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Employee Data Processing System</h1>
+
+    <h2>Employee Records</h2>
+
+    <p>Enter a department to view its employees and process the records.</p>
+
+    <form id="employeeForm">
+
+        <label for="department">Department:</label>
+
+        <input
+            type="text"
+            id="department"
+            placeholder="Enter department e.g. IT"
+            required
+        >
+
+        <button type="submit">Process Employee Data</button>
+
+    </form>
+
+    <hr>
+
+    <div id="result">
+
+        <h2>Employee Analysis Results</h2>
+
+        <h3>Employees in Selected Department</h3>
+        <p id="departmentEmployees"></p>
+
+        <h3>Employees Earning Above ₦200,000</h3>
+        <p id="highEarners"></p>
+
+        <h3>Average Employee Salary</h3>
+        <p id="averageSalary"></p>
+
+        <h3>Highest Paid Employee</h3>
+        <p id="highestEmployee"></p>
+
+        <h3>Names of All Employees</h3>
+        <p id="employeeNames"></p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
