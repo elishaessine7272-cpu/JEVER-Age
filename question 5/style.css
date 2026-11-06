@@ -1,0 +1,30 @@
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 180px;
+}
+
+.hidden {
+    display: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+button {
+    cursor: pointer;
+}

@@ -1,55 +1,54 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grading System</title>
     <link rel="stylesheet" href="style.css">
-    <title>Age Input</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Age Category </h1>
-     
-        
-        <input type="number" id="ageInput" placeholder="Enter your age">
-     
-       
-        <button onclick="checkAge()">Continue</button>
-     
-        <p id="result"></p>
-      </div>
 
-    <script>
-    
-    function checkAge() {
- 
-      var ageValue = document.getElementById("ageInput").value;
-      var age = Number(ageValue);
- 
-    
-      var resultText = document.getElementById("result");
- 
-      if (ageValue === "" || isNaN(age) || age < 0) {
-        resultText.innerHTML = "Please enter a valid age.";
-        return; 
-      }
- 
+    <h1>Student Grading System</h1>
 
-      var category = "";
- 
-      if (age <= 12) {
-        category = "Child";
-      } else if (age <= 19) {
-        category = "Big boy";
-      } else if (age <= 59) {
-        category = "Adult";
-      } else {
-        category = "Elder";
-      }
+    <form id="gradingForm">
 
-      resultText.innerHTML = "You are a " + category + ".";
-    }
+        <label for="studentName">Student Name:</label>
+        <input type="text" id="studentName" placeholder="Enter student name" required>
 
-    </script>
+        <h3>Enter Subject Scores</h3>
+
+        <label for="subject1">Mathematics:</label>
+        <input type="number" id="subject1" min="0" max="100" required>
+        <br><br>
+
+        <label for="subject2">English:</label>
+        <input type="number" id="subject2" min="0" max="100" required>
+        <br><br>
+
+        <label for="subject3">Biology:</label>
+        <input type="number" id="subject3" min="0" max="100" required>
+        <br><br>
+
+        <label for="subject4">Chemistry:</label>
+        <input type="number" id="subject4" min="0" max="100" required>
+        <br><br>
+
+        <label for="subject5">Physics:</label>
+        <input type="number" id="subject5" min="0" max="100" required>
+        <br><br>
+
+        <button type="submit">Calculate Result</button> <button type="button" onclick="document.getElementById('result').style.display = 'none';">Clear Result</button>
+
+    </form>
+
+    <div id="result" style="display: none;">
+        <p>Student Name: <span id="displayName">-</span></p>
+        <p>Total Score: <span id="total">-</span></p>
+        <p>Average Score: <span id="average">-</span></p>
+        <p>Grade: <span id="grade">-</span></p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

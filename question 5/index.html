@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Shopping Cart Application</h1>
+
+    <!-- Available Products -->
+    <h2>Available Products</h2>
+
+    <div id="productList" class="product-list"></div>
+
+    <hr>
+
+    <!-- Shopping Cart -->
+    <h2>My Shopping Cart</h2>
+
+    <p id="emptyCart">Your shopping cart is empty.</p>
+
+    <table id="cartTable" class="hidden">
+
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody id="cartItems"></tbody>
+
+    </table>
+
+    <br>
+
+    <!-- Cart Summary -->
+    <div id="cartSummary" class="hidden">
+
+        <h3>Cart Summary</h3>
+
+        <p>Total Items: <span id="totalItems">0</span></p>
+
+        <p>Subtotal: <span id="subtotal">₦0.00</span></p>
+
+        <p>Discount (10%): <span id="discount">₦0.00</span></p>
+
+        <h3>Final Amount: <span id="finalTotal">₦0.00</span></h3>
+
+        <button type="button" id="checkoutBtn">
+            Proceed to Checkout
+        </button>
+
+    </div>
+
+    <hr>
+
+    <!-- Final Checkout Summary -->
+    <div id="checkoutSummary" class="hidden">
+
+        <h2>Final Checkout Summary</h2>
+
+        <p>Number of Items: <span id="checkoutItems">0</span></p>
+
+        <p>Subtotal: <span id="checkoutSubtotal">₦0.00</span></p>
+
+        <p>Discount: <span id="checkoutDiscount">₦0.00</span></p>
+
+        <h3>Amount to Pay: <span id="checkoutTotal">₦0.00</span></h3>
+
+        <p id="discountMessage"></p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
